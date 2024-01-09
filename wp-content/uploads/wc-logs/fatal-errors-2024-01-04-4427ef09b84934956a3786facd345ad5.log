@@ -1,0 +1,35 @@
+2024-01-04T21:44:29+00:00 CRITICAL Unmatched '}' dans C:\xampp\htdocs\Brillance-academy\wp-content\themes\course-builder\learnpress-v4\single-course\course-info.php à la ligne 34
+
+2024-01-04T21:49:54+00:00 CRITICAL Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, function "thim_course_rate" not found or invalid function name in C:\xampp\htdocs\Brillance-academy\wp-includes\class-wp-hook.php:324
+Stack trace:
+#0 C:\xampp\htdocs\Brillance-academy\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#1 C:\xampp\htdocs\Brillance-academy\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#2 C:\xampp\htdocs\Brillance-academy\wp-content\themes\course-builder\learnpress-v4\single-course\content-landing-2.php(45): do_action('learn-press/cou...')
+#3 C:\xampp\htdocs\Brillance-academy\wp-content\plugins\learnpress\inc\lp-template-functions.php(878): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\Brillance-academy\wp-content\themes\course-builder\learnpress-v4\content-single-course.php(40): learn_press_get_template('single-course/c...')
+#5 C:\xampp\htdocs\Brillance-academy\wp-content\plugins\learnpress\inc\lp-template-functions.php(878): include('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\Brillance-academy\wp-content\plugins\learnpress\templates\single-course.php(27): learn_press_get_template('content-single-...')
+#7 C:\xampp\htdocs\Brillance-academy\wp-content\themes\course-builder\wrapper.php(28): include('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\Brillance-academy\wp-includes\template-loader.php(106): include('C:\\xampp\\htdocs...')
+#9 C:\xampp\htdocs\Brillance-academy\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#10 C:\xampp\htdocs\Brillance-academy\index.php(17): require('C:\\xampp\\htdocs...')
+#11 {main}
+  thrown dans C:\xampp\htdocs\Brillance-academy\wp-includes\class-wp-hook.php à la ligne 324
+
+2024-01-04T21:51:27+00:00 CRITICAL Uncaught Error: Call to a member function get_origin_price_html() on null in C:\xampp\htdocs\Brillance-academy\wp-content\themes\course-builder\inc\learnpress-functions.php:182
+Stack trace:
+#0 C:\xampp\htdocs\Brillance-academy\wp-includes\class-wp-hook.php(324): thim_related_courses('')
+#1 C:\xampp\htdocs\Brillance-academy\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#2 C:\xampp\htdocs\Brillance-academy\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#3 C:\xampp\htdocs\Brillance-academy\wp-content\themes\course-builder\learnpress-v4\single-course\content-landing-2.php(45): do_action('learn-press/cou...')
+#4 C:\xampp\htdocs\Brillance-academy\wp-content\plugins\learnpress\inc\lp-template-functions.php(878): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\Brillance-academy\wp-content\themes\course-builder\learnpress-v4\content-single-course.php(40): learn_press_get_template('single-course/c...')
+#6 C:\xampp\htdocs\Brillance-academy\wp-content\plugins\learnpress\inc\lp-template-functions.php(878): include('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\Brillance-academy\wp-content\plugins\learnpress\templates\single-course.php(27): learn_press_get_template('content-single-...')
+#8 C:\xampp\htdocs\Brillance-academy\wp-content\themes\course-builder\wrapper.php(28): include('C:\\xampp\\htdocs...')
+#9 C:\xampp\htdocs\Brillance-academy\wp-includes\template-loader.php(106): include('C:\\xampp\\htdocs...')
+#10 C:\xampp\htdocs\Brillance-academy\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#11 C:\xampp\htdocs\Brillance-academy\index.php(17): require('C:\\xampp\\htdocs...')
+#12 {main}
+  thrown dans C:\xampp\htdocs\Brillance-academy\wp-content\themes\course-builder\inc\learnpress-functions.php à la ligne 182
+

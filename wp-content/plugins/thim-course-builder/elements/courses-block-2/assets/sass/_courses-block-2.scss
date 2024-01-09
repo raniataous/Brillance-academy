@@ -1,0 +1,242 @@
+.thim-courses-block-2 {
+	padding-bottom: 55px;
+
+	.no-gutter {
+		margin: 0;
+
+		& > [class*='col-'] {
+			padding-left: 0;
+			padding-right: 0;
+		}
+
+		.intro-item {
+			.wrapper{
+				position: absolute;
+				top: 50%;
+				padding-left: 30px;
+				@include translate(0,-50%);
+			}
+		}
+	}
+
+	.intro-item {
+		position: relative;
+		z-index: 5;
+		@include box-shadow(12.9px 15.3px 18px 0 rgba(0, 0, 0, 0.15));
+
+		&:before {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			@include scale(1.06, 1.05);
+			z-index: -1;
+		}
+
+		.title {
+			font-size: 36px;
+			text-transform: capitalize;
+			line-height: 46px;
+			margin-bottom: 10px;
+			color: #ffffff;
+		}
+
+		.description {
+			font-size: 15px;
+			color: #fff;
+			line-height: 1.667;
+			font-weight: 400;
+			margin-bottom: 30px;
+		}
+
+		.view-courses-button {
+			display: inline-block;
+			font-size: 12px;
+			text-transform: uppercase;
+			padding: 8px 20px 8px 20px;
+			background-color: #fff;
+			font-weight: 600;
+			@include rounded(30px);
+			@include box-shadow(12.9px 15.3px 18px 0 rgba(0, 0, 0, 0.08));
+
+			&:hover {
+				@include box-shadow(4.5px 5.4px 10px 0 rgba(0, 0, 0, 0.06));
+			}
+		}
+	}
+
+	.course-item {
+		&.hide-label {
+			&:before,
+			.course-label {
+				display: none !important;
+				opacity: 0 !important;
+			}
+		}
+
+		&:hover {
+			.content-item{
+				.price {
+					.course-origin-price {
+						color: #fff;
+					}
+
+					.course-price {
+						color: #fff;
+						&.free {
+							color: #fff !important;
+						}
+					}
+				}
+			}
+
+
+			.featured-img {
+				&:before {
+					@include opacity(1);
+				}
+
+				&:after {
+					@include opacity(0);
+				}
+			}
+
+			&.new-course{
+				&:before{
+					border-top: 86px solid #df6c4f;
+				}
+			}
+		}
+
+		&.new-course {
+			position: relative;
+
+			&:before {
+				content: '';
+				position: absolute;
+				width: 0;
+				height: 0;
+				top: 0;
+				left: 0;
+				border-right: 86px solid transparent;
+				@include transition(all 0.5s);
+				z-index: 4;
+			}
+
+			.course-label {
+				position: absolute;
+				font-size: 18px;
+				color: #fff;
+				top: 18px;
+				left: 10px;
+				z-index: 1000;
+				@include rotate(-45deg);
+				font-weight: 400;
+				text-transform: uppercase;
+			}
+		}
+
+		.featured-img {
+			position: relative;
+
+			&:before, &:after {
+				content: '';
+				display: block;
+				position: absolute;
+				width: 100%;
+				height: calc(100% - 110px);
+				left: 0;
+				bottom: 0;
+				pointer-events: none;
+				@include transition(all 0.5s);
+			}
+
+			&:before {
+				background-image: linear-gradient(to bottom, rgba(223, 108, 79, 0), rgba(223, 108, 79, 0.7));
+				background-image: -webkit-gradient(linear,to  left top,to  left bottom, from(rgba(223,108,79,0)), to(rgba(223,108,79,0.7)));
+				background-image: -webkit-linear-gradient(to bottom, rgba(223,108,79,0), rgba(223,108,79,0.7));
+				@include opacity(0);
+				height: 0;
+
+			}
+
+			&:after {
+				z-index: 2;
+				background: linear-gradient(180deg, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.7) 100%);
+				@include opacity(1);
+			}
+		}
+
+		.content-item {
+			position: absolute;
+			bottom: 0;
+			z-index: 3;
+			width: 100%;
+			padding: 0 30px 35px 30px;
+
+			.name {
+				line-height: 1.625;
+				margin-bottom: 10px;
+				text-transform: capitalize;
+				display: inline-block;
+
+				a {
+					font-size: 16px;
+					color: #fff;
+				}
+			}
+
+			.title {
+				margin-bottom: 15px;
+
+				a {
+					display: block;
+					line-height: 1.556;
+					font-size: 18px;
+					font-weight: 500;
+					color: #fff;
+				}
+			}
+
+			.price {
+				display: inline-flex;
+				align-items: center;
+
+				.course-price {
+					font-size: 18px;
+					font-weight: 400;
+					margin-right: 10px;
+					@include transition(all 0.4s);
+				}
+
+				.free {
+					color: #df6c4f !important;
+					font-size: 20px;
+					text-transform: uppercase;
+				}
+
+				.course-origin-price {
+					order: 2;
+					font-size: 14px;
+					line-height: 25px;
+					filter: brightness(0.9);
+					@include transition(all 0.3s);
+					text-decoration: line-through;
+				}
+			}
+		}
+
+		&:hover {
+			.featured-img:before {
+				@include opacity(1);
+				height: calc(100% - 110px);
+			}
+
+			.featured-img:after {
+				@include opacity(0);
+			}
+		}
+	}
+}

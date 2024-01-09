@@ -1,0 +1,4 @@
+2024-01-06T11:48:06+00:00 CRITICAL Maximum execution time of 120 seconds exceeded dans C:\xampp\htdocs\Brillance-academy\wp-admin\includes\media.php à la ligne 3867
+
+2024-01-06T13:11:08+00:00 CRITICAL syntax error, unexpected single-quoted string "</a>" dans C:\xampp\htdocs\Brillance-academy\wp-content\themes\course-builder\inc\widgets\login\login.php à la ligne 45
+

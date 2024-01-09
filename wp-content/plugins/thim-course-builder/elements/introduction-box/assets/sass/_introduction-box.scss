@@ -1,0 +1,137 @@
+// style new
+.wrap-all {
+	position: relative;
+
+	.intro-box-background {
+		text-align: center;
+		background-repeat: no-repeat;
+		background-position: center;
+		transform: translateY(100px);
+		@media(max-width: 1024px) {
+			transform: translateY(0px);
+		}
+	}
+
+	.introduction-slider {
+		display: flex;
+		max-width: 900px;
+		margin: 0 auto 50px auto;
+		padding: 30px;
+		background: #fff;
+		-webkit-box-shadow: 0 15px 35px rgba(0, 29, 44, 0.1);
+		box-shadow: 0 15px 35px rgba(0, 29, 44, 0.1);
+
+		&.owl-carousel {
+			.owl-item {
+				background: transparent;
+
+				.wrapper-box {
+					display: flex;
+					align-items: center;
+
+					.content-wrapper {
+						padding-left: 30px;
+						padding-right: 0;
+
+						.title {
+							position: relative;
+							font-size: 20px;
+							line-height: 24px;
+							font-weight: 400;
+							margin-bottom: 15px;
+						}
+
+						.description {
+							font-size: 15px;
+							line-height: 25px;
+							font-weight: 400;
+							margin-bottom: 10px;
+						}
+
+						.more-detail {
+							position: relative;
+							font-size: 15px;
+							line-height: 25px;
+							font-weight: 600;
+							color: black;
+							&:hover {
+								color: $thim_body_primary_color;
+							}
+						}
+					}
+				}
+			}
+
+			.owl-nav {
+				.owl-next, .owl-prev {
+					position: absolute;
+					top: 50%;
+					display: block;
+					right: -65px;
+					border: 2px solid var(--thim-body-primary-color);
+					background: transparent;
+					color: var(--thim-body-primary-color);
+					width: 46px;
+					height: 46px;
+					font-size: 30px;
+					border-radius: 50%;
+					font-family: ionicons;
+					text-align: center;
+					line-height: 46px;
+					padding: 0;
+					margin: 0;
+
+					&:before {
+						content: "\f3d3";
+					}
+
+					&:hover {
+						opacity: 0.8;
+					}
+				}
+
+				.owl-prev {
+					left: -65px;
+					right: auto;
+
+					&:before {
+						content: "\f3d2";
+					}
+				}
+			}
+
+			.owl-dots {
+				display: none;
+				margin-top: 40px;
+			}
+
+			@media (max-width: 1200px) {
+				.owl-nav {
+					.owl-next {
+						right: -46px;
+					}
+
+					.owl-prev {
+						left: -46px;
+					}
+				}
+			}
+			@media (max-width: 768px) {
+				.owl-item .wrapper-box {
+					display: block;
+
+					.content-wrapper {
+						padding-left: 0;
+						padding-top: 30px;
+					}
+				}
+				.owl-dots {
+					display: inline-block
+				}
+				.owl-nav {
+					display: block;
+				}
+			}
+		}
+	}
+}
